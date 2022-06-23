@@ -6,7 +6,7 @@
 /*   By: jhurtado <jhurtado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 17:14:31 by jhurtado          #+#    #+#             */
-/*   Updated: 2022/06/23 13:48:29 by jhurtado         ###   ########.fr       */
+/*   Updated: 2022/06/23 13:51:14 by jhurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	main(int argc, char **argv)
 		write(2, "Error\n", 6);
 		return (0);
 	}
-	if (!ft_check_sort(stack1, stack2) && argc > 2)
+	if (!ft_check_sort(&stack1, argc) && argc > 2)
 	{
 		if (argc == 3)
 			comb_2(&stack1, stack2);
