@@ -6,7 +6,7 @@
 /*   By: jhurtado <jhurtado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 17:14:31 by jhurtado          #+#    #+#             */
-/*   Updated: 2022/06/23 11:11:11 by jhurtado         ###   ########.fr       */
+/*   Updated: 2022/06/23 13:48:29 by jhurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,28 +21,28 @@ int	main(int argc, char **argv)
 	stack2 = malloc(sizeof(t_stack));
 	*stack2 = NULL;
 	stack1 = args_in_stack(argc, argv);
-	if (!stack1 || argc <= 2)
-		return (0);
-	if (!ft_check_argv(argv, argc))
+	if (!ft_check_argv(argv, argc) || !stack1)
 	{
 		write(2, "Error\n", 6);
 		return (0);
 	}
-	if (argc == 3)
-		comb_2(&stack1, stack2);
-	if (argc == 4)
-		comb_3(&stack1);
-	if (argc == 5)
-		comb_4(&stack1, stack2);
-	if (argc == 6)
-		comb_5(&stack1, stack2);
-	else
-		ft_radix(&stack1, argc - 1);
+	if (!ft_check_sort(stack1, stack2) && argc > 2)
+	{
+		if (argc == 3)
+			comb_2(&stack1, stack2);
+		if (argc == 4)
+			comb_3(&stack1);
+		if (argc == 5)
+			comb_4(&stack1, stack2);
+		if (argc == 6)
+			comb_5(&stack1, stack2);
+		else
+			ft_radix(&stack1, argc - 1);
+	}
 	return (0);
 }
 
 //system("leaks -q push_swap");
-
 /*void	print_list(t_stack *stack)
 {
 	int		i;
