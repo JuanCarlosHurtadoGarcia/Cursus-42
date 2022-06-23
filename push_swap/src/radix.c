@@ -6,24 +6,11 @@
 /*   By: jhurtado <jhurtado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 10:03:15 by jhurtado          #+#    #+#             */
-/*   Updated: 2022/06/22 12:10:57 by jhurtado         ###   ########.fr       */
+/*   Updated: 2022/06/23 10:13:21 by jhurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-
-int	ft_max_nbr_length(int max_size)
-{
-	int	i;
-
-	i = 0;
-	while (max_size > 0)
-	{
-		max_size /= 10;
-		i++;
-	}
-	return (i);
-}
 
 int	ft_check_sort(t_stack **a, int stack_size)
 {

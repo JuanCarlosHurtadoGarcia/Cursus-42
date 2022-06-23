@@ -6,12 +6,11 @@
 /*   By: jhurtado <jhurtado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 11:17:50 by jhurtado          #+#    #+#             */
-/*   Updated: 2022/06/22 11:18:38 by jhurtado         ###   ########.fr       */
+/*   Updated: 2022/06/23 11:17:59 by jhurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-#include <stdio.h>
 
 int	ft_rotate(t_stack **stack, int c)
 {

@@ -6,12 +6,11 @@
 /*   By: jhurtado <jhurtado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 12:44:23 by jhurtado          #+#    #+#             */
-/*   Updated: 2022/06/22 10:19:07 by jhurtado         ###   ########.fr       */
+/*   Updated: 2022/06/23 11:17:55 by jhurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-#include <stdio.h>
 
 t_stack	*ft_new_copied_node(t_stack *to_copy_node)
 {

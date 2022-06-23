@@ -6,7 +6,7 @@
 /*   By: jhurtado <jhurtado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 17:14:02 by jhurtado          #+#    #+#             */
-/*   Updated: 2022/06/22 12:37:37 by jhurtado         ###   ########.fr       */
+/*   Updated: 2022/06/23 10:27:57 by jhurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ int					ft_check_sort(t_stack **a, int stack_size);
 void				ft_end_plus(t_stack **stack_a, int elements);
 int					min_pos(t_stack **stack_a);
 int					max_pos(t_stack **stack_a);
+int					ft_check_argv(char **argv, int size);
 
 #endif

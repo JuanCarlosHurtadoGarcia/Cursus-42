@@ -1,4 +1,4 @@
-SRC			= stack_aux.c stack_op_rotate.c stack_op_switch.c stack_op_aux.c order_comb.c stack_op_push.c radix.c
+SRC			= stack_aux.c stack_op_rotate.c stack_op_switch.c stack_op_aux.c order_comb.c stack_op_push.c radix.c check_input.c
 SRCS		= ${addprefix ${PRE}, ${SRC}}
 OBJS		= ${SRCS:.c=.o}
 PRE			= ./src/

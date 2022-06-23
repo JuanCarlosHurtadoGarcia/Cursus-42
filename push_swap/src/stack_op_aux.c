@@ -6,12 +6,11 @@
 /*   By: jhurtado <jhurtado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 13:21:17 by jhurtado          #+#    #+#             */
-/*   Updated: 2022/06/22 09:14:57 by jhurtado         ###   ########.fr       */
+/*   Updated: 2022/06/23 11:17:51 by jhurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-#include <stdio.h>
 
 int	ft_elements(t_stack *stack)
 {

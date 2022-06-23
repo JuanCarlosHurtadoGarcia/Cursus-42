@@ -6,41 +6,12 @@
 /*   By: jhurtado <jhurtado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 17:14:31 by jhurtado          #+#    #+#             */
-/*   Updated: 2022/06/22 12:46:51 by jhurtado         ###   ########.fr       */
+/*   Updated: 2022/06/23 11:11:11 by jhurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/push_swap.h"
 #include <stdio.h>
-
-int	ft_repeated(int argc, char **argv)
-{
-	char	*str;
-	int		i;
-	int		j;
-
-	str = " ";
-	i = 1;
-	j = 0;
-	while (i < argc)
-	{
-		str = ft_strjoin(str, argv[i]);
-		i++;
-	}
-	i = 0;
-	while (str[i])
-	{
-		j = 0;
-		while (j < i)
-		{
-			if (str[i] == str[j])
-				return (1);
-			j++;
-		}
-		i++;
-	}
-	return (0);
-}
 
 int	main(int argc, char **argv)
 {
@@ -50,8 +21,13 @@ int	main(int argc, char **argv)
 	stack2 = malloc(sizeof(t_stack));
 	*stack2 = NULL;
 	stack1 = args_in_stack(argc, argv);
-	//if (!stack1 || argc <= 2 || ft_repeated(argc, argv))
-	//	return (0);
+	if (!stack1 || argc <= 2)
+		return (0);
+	if (!ft_check_argv(argv, argc))
+	{
+		write(2, "Error\n", 6);
+		return (0);
+	}
 	if (argc == 3)
 		comb_2(&stack1, stack2);
 	if (argc == 4)
